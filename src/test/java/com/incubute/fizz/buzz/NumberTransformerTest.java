@@ -34,7 +34,7 @@ class NumberTransformerTest {
 
     @Test
     void shouldReturnFizzWhenNumberContains3InThousandthPlace() {
-        for (Integer num : Arrays.asList(356, 322, 328, 319)) {
+        for (Integer num : Arrays.asList(322, 328, 319)) {
             assertEquals("Fizz", numberTransformer.outputFor(num), String.format("Expecting Fizz for %s", num));
         }
     }
@@ -56,6 +56,13 @@ class NumberTransformerTest {
     @Test
     void shouldReturnFizzBuzzForMultiplesOf3And5() {
         for (Integer num : Arrays.asList(15, 45, 30)) {
+            assertEquals("FizzBuzz", numberTransformer.outputFor(num), String.format("Expecting FizzBuzz for %s", num));
+        }
+    }
+
+    @Test
+    void shouldReturnFizzBuzzForNumbersContainingBoth3And5() {
+        for (Integer num : Arrays.asList(532, 503, 53)) {
             assertEquals("FizzBuzz", numberTransformer.outputFor(num), String.format("Expecting FizzBuzz for %s", num));
         }
     }
