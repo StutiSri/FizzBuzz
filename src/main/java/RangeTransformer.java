@@ -2,12 +2,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 class RangeTransformer {
+
+    private NumberTransformer numberTransformer;
+
+    public RangeTransformer(NumberTransformer numberTransformer) {
+        this.numberTransformer = numberTransformer;
+    }
+
     List<String> transform(int range) {
         ArrayList<String> transformedRange = new ArrayList<String>();
-        if(range == 0){
-            return transformedRange;
+        for (int num = 1; num <= range; num++) {
+            transformedRange.add(numberTransformer.outputFor(num));
         }
-        transformedRange.add(String.format("%s", range));
         return transformedRange;
     }
 }
