@@ -26,6 +26,20 @@ class NumberTransformerTest {
     }
 
     @Test
+    void shouldReturnFizzWhenNumberContains3InHundredthPlace() {
+        for (Integer num : Arrays.asList(336, 332, 338, 337)) {
+            assertEquals("Fizz", numberTransformer.outputFor(num), String.format("Expecting Fizz for %s", num));
+        }
+    }
+
+    @Test
+    void shouldReturnFizzWhenNumberContains3InThousandthPlace() {
+        for (Integer num : Arrays.asList(356, 322, 328, 319)) {
+            assertEquals("Fizz", numberTransformer.outputFor(num), String.format("Expecting Fizz for %s", num));
+        }
+    }
+
+    @Test
     void shouldReturnFizzForMultiplesOf5() {
         for (Integer num : Arrays.asList(5, 10, 20)) {
             assertEquals("Buzz", numberTransformer.outputFor(num), String.format("Expecting Buzz for %s", num));
