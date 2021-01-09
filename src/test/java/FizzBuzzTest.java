@@ -21,4 +21,11 @@ class FizzBuzzTest {
             assertEquals("Buzz", fizzBuzz.outputFor(num), String.format("Expecting Buzz for %s", num));
         }
     }
+
+    @Test
+    void shouldReturnFizzBuzzForMultiplesOf3And5() {
+        for (Integer num : Arrays.asList(15, 45, 30)) {
+            assertEquals("FizzBuzz", fizzBuzz.outputFor(num), String.format("Expecting FizzBuzz for %s", num));
+        }
+    }
 }
