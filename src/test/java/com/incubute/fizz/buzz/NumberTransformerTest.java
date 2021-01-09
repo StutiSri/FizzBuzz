@@ -1,3 +1,6 @@
+package com.incubute.fizz.buzz;
+
+import com.incubyte.fizz.buzz.NumberTransformer;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

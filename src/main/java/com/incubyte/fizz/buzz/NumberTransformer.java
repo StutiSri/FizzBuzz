@@ -1,3 +1,5 @@
+package com.incubyte.fizz.buzz;
+
 public class NumberTransformer {
 
     private static final String FIZZ = "Fizz";
@@ -5,7 +7,7 @@ public class NumberTransformer {
     private static final int FIZZ_FACTOR = 3;
     private static final int BUZZ_FACTOR = 5;
 
-    String outputFor(int num) {
+    public String outputFor(int num) {
         StringBuilder stringBuilder = new StringBuilder();
         if (isMultipleOf(num, FIZZ_FACTOR)) {
             stringBuilder.append(FIZZ);

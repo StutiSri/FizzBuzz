@@ -1,7 +1,9 @@
+package com.incubyte.fizz.buzz;
+
 import java.util.ArrayList;
 import java.util.List;
 
-class RangeTransformer {
+public class RangeTransformer {
 
     private NumberTransformer numberTransformer;
 
@@ -9,7 +11,7 @@ class RangeTransformer {
         this.numberTransformer = numberTransformer;
     }
 
-    List<String> transform(int range) {
+    public List<String> transform(int range) {
         ArrayList<String> transformedRange = new ArrayList<String>();
         for (int num = 1; num <= range; num++) {
             transformedRange.add(numberTransformer.outputFor(num));
