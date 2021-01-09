@@ -32,7 +32,7 @@ class RangeTransformerFunctionalTest {
     }
 
     @Test
-    void shouldReturnSingletonForRangeOf15() {
+    void shouldReturnTransformedListForRangeOf15() {
         List<String> transformedList = rangeTransformer.transform(15);
         assertEquals(15, transformedList.size());
         assertEquals("1", transformedList.get(0));
@@ -50,5 +50,17 @@ class RangeTransformerFunctionalTest {
         assertEquals("Fizz", transformedList.get(12));
         assertEquals("14", transformedList.get(13));
         assertEquals("FizzBuzz", transformedList.get(14));
+    }
+
+    @Test
+    void shouldReturnTransformedListForRangeOf150() {
+        List<String> transformedList = rangeTransformer.transform(150);
+        assertEquals(150, transformedList.size());
+        assertEquals("Fizz", transformedList.get(31));
+        assertEquals("FizzBuzz", transformedList.get(52));
+        assertEquals("Buzz", transformedList.get(54));
+        assertEquals("FizzBuzz", transformedList.get(56));
+        assertEquals("Fizz", transformedList.get(113));
+        assertEquals("FizzBuzz", transformedList.get(129));
     }
 }
