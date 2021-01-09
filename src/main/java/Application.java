@@ -18,7 +18,7 @@ public class Application {
     }
 
     private static int rangeFromInput(String[] arg) {
-        if (arg == null) {
+        if (arg == null || arg.length == 0) {
             return DEFAULT_RANGE;
         }
         return Integer.parseInt(arg[0]);
