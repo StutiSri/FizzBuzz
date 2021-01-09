@@ -47,6 +47,13 @@ class NumberTransformerTest {
     }
 
     @Test
+    void shouldReturnBuzzWhenNumberContains5() {
+        for (Integer num : Arrays.asList(51, 54, 541, 58)) {
+            assertEquals("Buzz", numberTransformer.outputFor(num), String.format("Expecting Buzz for %s", num));
+        }
+    }
+
+    @Test
     void shouldReturnFizzBuzzForMultiplesOf3And5() {
         for (Integer num : Arrays.asList(15, 45, 30)) {
             assertEquals("FizzBuzz", numberTransformer.outputFor(num), String.format("Expecting FizzBuzz for %s", num));
