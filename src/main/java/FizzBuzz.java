@@ -2,17 +2,18 @@ public class FizzBuzz {
 
     private static final String FIZZ = "Fizz";
     private static final String BUZZ = "Buzz";
-    public static final int FIZZ_FACTOR = 3;
-    public static final int BUZZ_FACTOR = 5;
+    private static final int FIZZ_FACTOR = 3;
+    private static final int BUZZ_FACTOR = 5;
 
     String outputFor(int num) {
+        StringBuilder stringBuilder = new StringBuilder();
         if (isMultipleOf(num, FIZZ_FACTOR)) {
-            return FIZZ;
+            stringBuilder.append(FIZZ);
         }
         if (isMultipleOf(num, BUZZ_FACTOR)) {
-            return BUZZ;
+            stringBuilder.append(BUZZ);
         }
-        return null;
+        return stringBuilder.toString();
     }
 
     private boolean isMultipleOf(int num, int factor) {
