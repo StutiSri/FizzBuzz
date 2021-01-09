@@ -12,7 +12,7 @@ public class NumberTransformer {
         if (isMultipleOf(num, NUMBER_ASSOCIATED_WITH_FIZZ) || containsDigit(num, NUMBER_ASSOCIATED_WITH_FIZZ)) {
             stringBuilder.append(FIZZ);
         }
-        if (isMultipleOf(num, NUMBER_ASSOCIATED_WITH_BUZZ)) {
+        if (isMultipleOf(num, NUMBER_ASSOCIATED_WITH_BUZZ) || containsDigit(num, NUMBER_ASSOCIATED_WITH_BUZZ)) {
             stringBuilder.append(BUZZ);
         }
         if (stringBuilder.length() == 0) {
