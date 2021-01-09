@@ -24,4 +24,18 @@ class RangeTransformerTest {
         List<String> transformedRange = rangeTransformer.transform(1);
         assertEquals("1", transformedRange.get(0));
     }
+
+    @Test
+    void shouldReturnListWithSize3ForRangeOf3() {
+        List<String> transformedRange = rangeTransformer.transform(3);
+        assertEquals(3, transformedRange.size());
+    }
+
+    @Test
+    void shouldReturnListWithTransformedValueRangeOf3() {
+        List<String> transformedRange = rangeTransformer.transform(3);
+        assertEquals("1", transformedRange.get(0));
+        assertEquals("2", transformedRange.get(1));
+        assertEquals("3", transformedRange.get(2));
+    }
 }
