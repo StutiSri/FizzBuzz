@@ -55,7 +55,7 @@ class NumberTransformerTest {
 
     @Test
     void shouldReturnNumberForNonMultiplesOf3AndOr5() {
-        for (Integer num : Arrays.asList(1, 2, 4, 11, 31, 34)) {
+        for (Integer num : Arrays.asList(1, 2, 4, 11, 22, 26)) {
             assertEquals(String.format("%s", num), numberTransformer.outputFor(num), String.format("Expecting %s for %s", num, num));
         }
     }

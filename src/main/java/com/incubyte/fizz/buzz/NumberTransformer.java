@@ -22,8 +22,12 @@ public class NumberTransformer {
     }
 
     private boolean containsDigit(int num, int digitToBeSearched) {
-        if (num % 10 == digitToBeSearched) {
-            return true;
+        while (num % 10 != 0) {
+            int digitInNumber = num % 10;
+            if (digitInNumber == digitToBeSearched) {
+                return true;
+            }
+            num = num / 10;
         }
         return false;
     }
