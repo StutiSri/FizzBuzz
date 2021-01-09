@@ -68,9 +68,23 @@ class NumberTransformerTest {
     }
 
     @Test
+    void shouldReturnFizzBuzzForNumbersDivisibleBy3AndContains5() {
+        for (Integer num : Arrays.asList(504, 507, 513)) {
+            assertEquals("FizzBuzz", numberTransformer.outputFor(num), String.format("Expecting FizzBuzz for %s", num));
+        }
+    }
+
+    @Test
     void shouldReturnNumberForNonMultiplesOf3AndOr5() {
         for (Integer num : Arrays.asList(1, 2, 4, 11, 22, 26)) {
             assertEquals(String.format("%s", num), numberTransformer.outputFor(num), String.format("Expecting %s for %s", num, num));
+        }
+    }
+
+    @Test
+    void shouldReturnNumberForNonMultiplesOf5AndOr3() {
+        for (Integer num : Arrays.asList(305, 310, 130, 230)) {
+            assertEquals("FizzBuzz", numberTransformer.outputFor(num), String.format("Expecting FizzBuzz for %s", num));
         }
     }
 }
