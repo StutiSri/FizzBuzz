@@ -12,4 +12,10 @@ class RangeTransformerTest {
         List<String> transformedRange = rangeTransformer.transform(0);
         assertEquals(0, transformedRange.size());
     }
+
+    @Test
+    void shouldReturnSingletonForRangeOf1() {
+        List<String> transformedRange = rangeTransformer.transform(1);
+        assertEquals(1, transformedRange.size());
+    }
 }
