@@ -13,6 +13,9 @@ public class NumberTransformer {
         if (isMultipleOf(num, BUZZ_FACTOR)) {
             stringBuilder.append(BUZZ);
         }
+        if(stringBuilder.length() == 0){
+            stringBuilder.append(num);
+        }
         return stringBuilder.toString();
     }
 
