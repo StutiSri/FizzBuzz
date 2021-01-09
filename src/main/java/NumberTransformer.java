@@ -1,4 +1,4 @@
-public class FizzBuzz {
+public class NumberTransformer {
 
     private static final String FIZZ = "Fizz";
     private static final String BUZZ = "Buzz";
