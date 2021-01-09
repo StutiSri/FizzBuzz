@@ -47,7 +47,7 @@ class RangeTransformerFunctionalTest {
         assertEquals("Buzz", transformedList.get(9));
         assertEquals("11", transformedList.get(10));
         assertEquals("Fizz", transformedList.get(11));
-        assertEquals("13", transformedList.get(12));
+        assertEquals("Fizz", transformedList.get(12));
         assertEquals("14", transformedList.get(13));
         assertEquals("FizzBuzz", transformedList.get(14));
     }
