@@ -19,6 +19,13 @@ class NumberTransformerTest {
     }
 
     @Test
+    void shouldReturnFizzWhenNumberContains3InUnitsPlace() {
+        for (Integer num : Arrays.asList(13, 23, 43, 39)) {
+            assertEquals("Fizz", numberTransformer.outputFor(num), String.format("Expecting Fizz for %s", num));
+        }
+    }
+
+    @Test
     void shouldReturnFizzForMultiplesOf5() {
         for (Integer num : Arrays.asList(5, 10, 20)) {
             assertEquals("Buzz", numberTransformer.outputFor(num), String.format("Expecting Buzz for %s", num));
