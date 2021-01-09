@@ -18,4 +18,10 @@ class RangeTransformerTest {
         List<String> transformedRange = rangeTransformer.transform(1);
         assertEquals(1, transformedRange.size());
     }
+
+    @Test
+    void shouldReturnSingletonWithValueAs1ForRangeOf1() {
+        List<String> transformedRange = rangeTransformer.transform(1);
+        assertEquals("1", transformedRange.get(0));
+    }
 }
